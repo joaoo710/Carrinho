@@ -9,7 +9,9 @@ function App() {
   return (
     <>
       <Header cartCount={cartCount} />
-      <Outlet setCartCount={setCartCount} />
+      <main>
+        <Outlet setCartCount={setCartCount} />
+      </main>
     </>
   );
 }
