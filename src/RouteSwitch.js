@@ -5,7 +5,10 @@ const RouteSwitch = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App />} />
+        <Route path='/' element={<App />}>
+          <Route path='products' element={null} />
+          <Route path='cart' element={null} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
