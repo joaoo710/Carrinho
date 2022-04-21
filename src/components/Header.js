@@ -1,6 +1,7 @@
 import Container from './Container';
 import '../css/Header.css';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const Header = () => {
   return (
@@ -9,6 +10,7 @@ const Header = () => {
         <Link to='/'>
           <h1>Stinson Style</h1>
         </Link>
+        <Navbar />
       </Container>
     </header>
   );
