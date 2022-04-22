@@ -16,10 +16,12 @@
 }
 
 body {
-  background: var(--bg);
+  background: var(--primary);
+  padding-bottom: 32px;
 }
 
 #root {
+  background: var(--bg);
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -36,4 +38,10 @@ main {
   align-items: center;
   justify-content: flex-start;
   flex-grow: 1;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    padding-bottom: 0;
+  }
 }
