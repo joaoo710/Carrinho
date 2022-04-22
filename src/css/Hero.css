@@ -1,0 +1,60 @@
+.hero {
+  margin: 0;
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero .gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  height: 100%;
+}
+
+.hero h2,
+.hero p {
+  text-align: center;
+  color: inherit;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 600px) {
+  .hero .container {
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: min(48px + 2vw, 12vw);
+  }
+
+  .hero h2,
+  .hero p {
+    max-width: 40%;
+    text-align: left;
+  }
+}
