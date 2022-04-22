@@ -1,7 +1,10 @@
 import '../css/Container.css';
 
 const Container = (props) => {
-  return <div className='container'>{props.children}</div>;
+  const { classes = [] } = props;
+  return (
+    <div className={'container ' + classes.join(' ')}>{props.children}</div>
+  );
 };
 
 export default Container;
