@@ -48,13 +48,30 @@
 @media screen and (min-width: 600px) {
   .hero .container {
     justify-content: center;
-    align-items: flex-start;
     padding-left: min(48px + 2vw, 12vw);
+    padding-right: min(48px + 2vw, 12vw);
+  }
+
+  .hero .container.left {
+    align-items: flex-start;
+  }
+
+  .hero .container.right {
+    align-items: flex-end;
   }
 
   .hero h2,
   .hero p {
     max-width: 40%;
+  }
+
+  .hero .container.left h2,
+  .hero .container.left p {
     text-align: left;
+  }
+
+  .hero .container.right h2,
+  .hero .container.right p {
+    text-align: right;
   }
 }
