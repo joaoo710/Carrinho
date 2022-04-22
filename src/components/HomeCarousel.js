@@ -60,6 +60,10 @@ const HomeCarousel = () => {
             backgroundPositionY: 'center',
             color: '#fff',
           }}
+          bgCss={{
+            background:
+              'linear-gradient(45deg, rgba(68, 45, 39, 0.5), rgba(0, 0, 0, 0))',
+          }}
         />
       </SwiperSlide>
     </Swiper>
