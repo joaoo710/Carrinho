@@ -1,0 +1,14 @@
+.card .name-price {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card .name-price h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.card .name-price p {
+  font-size: 1.3rem;
+}
