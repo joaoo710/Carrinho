@@ -1,0 +1,27 @@
+.card-controls {
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--card-bg);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  gap: 6px;
+}
+
+.card-controls p {
+  font-size: 1.5rem;
+}
+
+.card-controls button {
+  padding: 14px;
+  color: #fff;
+  background: var(--secondary);
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.card-controls button:hover {
+  background: var(--secondary-hover);
+}
