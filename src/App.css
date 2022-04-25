@@ -18,7 +18,7 @@
 
 body {
   background: var(--primary);
-  padding-bottom: 32px;
+  margin-bottom: 7vh; /* Compesates fixed navbar height on mobile */
 }
 
 #root {
@@ -43,6 +43,6 @@ main {
 
 @media screen and (min-width: 600px) {
   body {
-    padding-bottom: 0;
+    margin: 0;
   }
 }

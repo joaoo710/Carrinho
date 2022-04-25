@@ -8,6 +8,7 @@
   left: 0;
   background: var(--primary);
   padding: 16px;
+  max-height: 7vh;
 }
 
 .navbar * {
