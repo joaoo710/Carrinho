@@ -10,7 +10,7 @@ const Header = (props) => {
         <Link to='/'>
           <h1>Stinson Style</h1>
         </Link>
-        <Navbar cartCount={props.cartCount} />
+        <Navbar cart={props.cart} />
       </Container>
     </header>
   );
