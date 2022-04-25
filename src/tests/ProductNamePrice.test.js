@@ -10,13 +10,13 @@ describe('ProductNamePrice component', () => {
 
   test('It renders the price', () => {
     render(<ProductNamePrice price={40.23} />);
-    const price = screen.getByText(/40\.23/g);
+    const price = screen.getByText(/40\.23/);
     expect(price).toBeInTheDocument();
   });
 
   test('It renders the price with two decimal places', () => {
     render(<ProductNamePrice price={20} />);
-    const price = screen.getByText(/20\.00/g);
+    const price = screen.getByText(/20\.00/);
     expect(price).toBeInTheDocument();
   });
 
@@ -28,7 +28,7 @@ describe('ProductNamePrice component', () => {
 
   test('It renders "0.00" when no price is passed', () => {
     render(<ProductNamePrice />);
-    const price = screen.getByText(/0\.00/g);
+    const price = screen.getByText(/0\.00/);
     expect(price).toBeInTheDocument();
   });
 });
