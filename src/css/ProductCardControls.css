@@ -21,6 +21,7 @@
   border: none;
   border-radius: 8px;
   transition: background 0.3s;
+  cursor: pointer;
 }
 
 .card-controls button:last-child {
@@ -31,15 +32,13 @@
   background: var(--secondary-hover);
 }
 
-@media screen and (min-width: 600px) {
-  .card-controls {
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-    padding: 8px;
-    margin: 0;
-  }
+.card-controls.full {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  margin: 0;
+}
 
-  .card-controls p,
-  .card-controls button {
-    display: inline-block;
-  }
+.card-controls.full p,
+.card-controls.full button {
+  display: inline-block;
 }
