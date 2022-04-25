@@ -4,9 +4,15 @@ import Navbar from '../components/Navbar';
 
 describe('Navbar component', () => {
   test('It renders a nav element', () => {
+    const cart = [
+      {
+        quantity: 0,
+      },
+    ];
+
     render(
       <MemoryRouter>
-        <Navbar />
+        <Navbar cart={cart} />
       </MemoryRouter>
     );
 
@@ -15,9 +21,15 @@ describe('Navbar component', () => {
   });
 
   test('It has two links', () => {
+    const cart = [
+      {
+        quantity: 0,
+      },
+    ];
+
     render(
       <MemoryRouter>
-        <Navbar />
+        <Navbar cart={cart} />
       </MemoryRouter>
     );
 
@@ -26,9 +38,15 @@ describe('Navbar component', () => {
   });
 
   test('The first link says Products', () => {
+    const cart = [
+      {
+        quantity: 0,
+      },
+    ];
+
     render(
       <MemoryRouter>
-        <Navbar />
+        <Navbar cart={cart} />
       </MemoryRouter>
     );
 
@@ -37,9 +55,15 @@ describe('Navbar component', () => {
   });
 
   test('The first link redirects to /products', () => {
+    const cart = [
+      {
+        quantity: 0,
+      },
+    ];
+
     render(
       <MemoryRouter>
-        <Navbar />
+        <Navbar cart={cart} />
       </MemoryRouter>
     );
 
@@ -48,9 +72,15 @@ describe('Navbar component', () => {
   });
 
   test('The second link says Cart', () => {
+    const cart = [
+      {
+        quantity: 0,
+      },
+    ];
+
     render(
       <MemoryRouter>
-        <Navbar />
+        <Navbar cart={cart} />
       </MemoryRouter>
     );
 
@@ -59,9 +89,15 @@ describe('Navbar component', () => {
   });
 
   test('The second link redirects to /cart', () => {
+    const cart = [
+      {
+        quantity: 0,
+      },
+    ];
+
     render(
       <MemoryRouter>
-        <Navbar />
+        <Navbar cart={cart} />
       </MemoryRouter>
     );
 
