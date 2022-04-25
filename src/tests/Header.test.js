@@ -3,10 +3,16 @@ import { MemoryRouter } from 'react-router-dom';
 import Header from '../components/Header';
 
 describe('Header component', () => {
+  const cart = [
+    {
+      quantity: 0,
+    },
+  ];
+
   test('It renders the site title', () => {
     render(
       <MemoryRouter>
-        <Header />
+        <Header cart={cart} />
       </MemoryRouter>
     );
     const siteName = screen.getByText(/Stinson Style/i);
@@ -14,9 +20,15 @@ describe('Header component', () => {
   });
 
   test('It renders a heading', () => {
+    const cart = [
+      {
+        quantity: 0,
+      },
+    ];
+
     render(
       <MemoryRouter>
-        <Header />
+        <Header cart={cart} />
       </MemoryRouter>
     );
     const h1 = screen.getByRole('heading');
