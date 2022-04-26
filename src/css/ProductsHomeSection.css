@@ -48,3 +48,18 @@
     text-align: left;
   }
 }
+
+@media screen and (min-width: 600px) and (max-width: 899px) {
+  .products-section .product-card .bottom {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 6px;
+    flex-grow: 1;
+  }
+
+  .products-section .card-controls {
+    margin-top: auto;
+    margin-left: auto;
+  }
+}
