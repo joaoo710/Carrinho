@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Footer from './components/Footer';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -25,6 +26,7 @@ function App() {
           <Route path='cart' element={null} />
         </Routes>
       </main>
+      <Footer />
     </>
   );
 }
