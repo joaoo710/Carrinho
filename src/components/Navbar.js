@@ -3,9 +3,7 @@ import '../css/Navbar.css';
 
 const Navbar = (props) => {
   const { cart } = props;
-  const cartCount = cart.reduce((p1, p2) => p1.quantity + p2.quantity, {
-    quantity: 0,
-  });
+  const count = cart.reduce((a, b) => a + b.quantity, 0);
   return (
     <nav className='navbar'>
       <ul>
@@ -13,9 +11,7 @@ const Navbar = (props) => {
           <NavLink to='/products'>Products</NavLink>
         </li>
         <li>
-          <NavLink to='/cart'>
-            Cart {cartCount > 0 ? `[${cartCount}]` : null}
-          </NavLink>
+          <NavLink to='/cart'>Cart {count > 0 ? `[${count}]` : null}</NavLink>
         </li>
       </ul>
     </nav>
