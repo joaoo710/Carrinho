@@ -2,11 +2,11 @@ import HomeCarousel from '../components/HomeCarousel';
 import ProductsHomeSection from '../components/ProductsHomeSection';
 
 const Home = (props) => {
-  const { addToCart } = props;
+  const { addToCart, cart } = props;
   return (
     <section>
       <HomeCarousel />
-      <ProductsHomeSection addToCart={addToCart} />
+      <ProductsHomeSection addToCart={addToCart} cart={cart} />
     </section>
   );
 };

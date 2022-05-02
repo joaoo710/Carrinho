@@ -3,14 +3,23 @@ import ProductCard from '../components/ProductCard';
 import products from '../data/products';
 import '../css/Products.css';
 
-const Products = () => {
+const Products = (props) => {
+  const { addToCart, removeFromCart, cart } = props;
   return (
     <section id='products-page'>
       <Container>
         <h2>Products</h2>
         <div className='products-list'>
           {products.map((product) => {
-            return <ProductCard product={product} key={product.id} />;
+            return (
+              <ProductCard
+                product={product}
+                key={product.id}
+                cart={cart}
+                addToCart={addToCart}
+                removeFromCart={removeFromCart}
+              />
+            );
           })}
         </div>
       </Container>

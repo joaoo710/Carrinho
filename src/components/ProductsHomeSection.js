@@ -5,15 +5,28 @@ import '../css/ProductsHomeSection.css';
 import { Link } from 'react-router-dom';
 
 const ProductsHomeSection = (props) => {
-  const { addToCart } = props;
+  const { addToCart, cart } = props;
+
   return (
     <section className='products-section'>
       <Container>
         <h2>Most popular</h2>
         <div className='products'>
-          <ProductCard product={products[1]} addToCart={addToCart} />
-          <ProductCard product={products[4]} addToCart={addToCart} />
-          <ProductCard product={products[10]} addToCart={addToCart} />
+          <ProductCard
+            product={products[1]}
+            addToCart={addToCart}
+            cart={cart}
+          />
+          <ProductCard
+            product={products[4]}
+            addToCart={addToCart}
+            cart={cart}
+          />
+          <ProductCard
+            product={products[10]}
+            addToCart={addToCart}
+            cart={cart}
+          />
         </div>
         <Link to='/products'>Check more products...</Link>
       </Container>

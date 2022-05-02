@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Card from './Card';
 import ProductCardControls from './ProductCardControls';
 import ProductNamePrice from './ProductNamePrice';
@@ -11,29 +10,19 @@ const ProductCard = (props) => {
     addToCart,
     horizontal = false,
     fullControls = false,
+    removeFromCart,
+    cart,
   } = props;
-  const [quantity, setQuantity] = useState(0);
 
-  const addProduct = (product) => {
-    setQuantity((prevState) => {
-      const qt = prevState + 1;
-      addToCart({ ...product, quantity: qt });
-      return qt;
-    });
-  };
-
-  const removeProduct = (product) => {
-    setQuantity((prevState) => {
-      const qt = prevState - 1;
-      if (prevState > 0) {
-        addToCart({ ...product, quantity: qt });
-        return qt;
-      }
-      return prevState;
-    });
+  const getQuantity = (id) => {
+    if (cart.some((item) => item.id === id)) {
+      return cart.filter((item) => item.id === id)[0].quantity;
+    }
+    return 0;
   };
 
   const cssClasses = ['product-card', horizontal ? 'horizontal' : null];
+
   return (
     <Card classes={cssClasses}>
       <img src={product.img} alt={product.name} />
@@ -41,15 +30,15 @@ const ProductCard = (props) => {
         {total ? (
           <ProductNamePrice
             name={product.name}
-            price={product.price * quantity}
+            price={product.price * getQuantity(product.id)}
           />
         ) : (
           <ProductNamePrice name={product.name} price={product.price} />
         )}
         <ProductCardControls
-          addBtn={addProduct}
-          removeBtn={removeProduct}
-          counter={quantity}
+          addBtn={() => addToCart(product)}
+          removeBtn={() => removeFromCart(product)}
+          counter={getQuantity(product.id)}
           full={fullControls}
         />
       </div>

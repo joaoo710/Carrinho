@@ -6,14 +6,40 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Products from './pages/Products';
+import Cart from './pages/Cart';
 
 function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
+    product.quantity = 1;
     setCart((prevCart) => {
-      const newCart = prevCart.filter((prod) => prod.id !== product.id);
-      return [product, ...newCart];
+      if (prevCart.some((item) => item.id === product.id)) {
+        return prevCart.map((item) => {
+          if (item.id === product.id) {
+            const newItem = { ...item };
+            newItem.quantity++;
+            return newItem;
+          }
+          return item;
+        });
+      } else {
+        return [product, ...prevCart];
+      }
+    });
+  };
+
+  const removeFromCart = (product) => {
+    setCart((prevCart) => {
+      const newCart = prevCart.map((item) => {
+        if (item.id === product.id) {
+          const newItem = { ...item };
+          newItem.quantity--;
+          return newItem;
+        }
+        return item;
+      });
+      return newCart.filter((item) => item.quantity > 0);
     });
   };
 
@@ -23,8 +49,26 @@ function App() {
       <main>
         <Routes>
           <Route index element={<Home addToCart={addToCart} cart={cart} />} />
-          <Route path='products' element={<Products />} />
-          <Route path='cart' element={null} />
+          <Route
+            path='products'
+            element={
+              <Products
+                addToCart={addToCart}
+                removeFromCart={removeFromCart}
+                cart={cart}
+              />
+            }
+          />
+          <Route
+            path='cart'
+            element={
+              <Cart
+                cart={cart}
+                addToCart={addToCart}
+                removeFromCart={removeFromCart}
+              />
+            }
+          />
         </Routes>
       </main>
       <Footer />
