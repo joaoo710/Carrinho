@@ -12,7 +12,6 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-    product.quantity = 1;
     setCart((prevCart) => {
       if (prevCart.some((item) => item.id === product.id)) {
         return prevCart.map((item) => {
@@ -24,6 +23,7 @@ function App() {
           return item;
         });
       } else {
+        product.quantity = 1;
         return [product, ...prevCart];
       }
     });
