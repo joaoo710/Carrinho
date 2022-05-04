@@ -43,32 +43,28 @@ function App() {
     });
   };
 
+  const homePage = <Home addToCart={addToCart} cart={cart} />;
+  const productsPage = (
+    <Products
+      addToCart={addToCart}
+      removeFromCart={removeFromCart}
+      cart={cart}
+    />
+  );
+  const cartPage = (
+    <Cart cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} />
+  );
+
   return (
     <>
       <Header cart={cart} />
       <main>
         <Routes>
-          <Route index element={<Home addToCart={addToCart} cart={cart} />} />
-          <Route
-            path='products'
-            element={
-              <Products
-                addToCart={addToCart}
-                removeFromCart={removeFromCart}
-                cart={cart}
-              />
-            }
-          />
-          <Route
-            path='cart'
-            element={
-              <Cart
-                cart={cart}
-                addToCart={addToCart}
-                removeFromCart={removeFromCart}
-              />
-            }
-          />
+          <Route index element={homePage} />
+          <Route path='products' element={productsPage}>
+            <Route path=':productId' element={null} />
+          </Route>
+          <Route path='cart' element={cartPage} />
         </Routes>
       </main>
       <Footer />
