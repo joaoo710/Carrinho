@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Cart from './pages/Cart';
+import Product from './pages/Product';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -51,6 +52,7 @@ function App() {
       cart={cart}
     />
   );
+  const productPage = <Product />;
   const cartPage = (
     <Cart cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} />
   );
@@ -61,9 +63,8 @@ function App() {
       <main>
         <Routes>
           <Route index element={homePage} />
-          <Route path='products' element={productsPage}>
-            <Route path=':productId' element={null} />
-          </Route>
+          <Route path='products' element={productsPage} />
+          <Route path='products/:productId' element={productPage} />
           <Route path='cart' element={cartPage} />
         </Routes>
       </main>
