@@ -24,7 +24,7 @@ const Product = (props) => {
   return (
     <section id='product-page'>
       {product === false ? (
-        <h2>PRODUCT NOT FOUND</h2>
+        <h2 className='message-404'>Product not found</h2>
       ) : (
         <Container>
           <div>
