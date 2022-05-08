@@ -6,6 +6,10 @@
   align-items: flex-start;
 }
 
+.product-card a {
+  width: 100%;
+}
+
 .product-card img {
   max-width: 100%;
   border-radius: 6px;

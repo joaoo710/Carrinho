@@ -2,6 +2,7 @@ import Card from './Card';
 import ProductCardControls from './ProductCardControls';
 import ProductNamePrice from './ProductNamePrice';
 import '../css/ProductCard.css';
+import { Link } from 'react-router-dom';
 
 const ProductCard = (props) => {
   const {
@@ -12,6 +13,8 @@ const ProductCard = (props) => {
     fullControls = false,
     removeFromCart,
     cart,
+    hasLink = false,
+    link = '',
   } = props;
 
   const getQuantity = (id) => {
@@ -23,24 +26,45 @@ const ProductCard = (props) => {
 
   const cssClasses = ['product-card', horizontal ? 'horizontal' : null];
 
+  const productImage = hasLink ? (
+    <Link to={link}>
+      <img src={product.img} alt={product.name} />
+    </Link>
+  ) : (
+    <img src={product.img} alt={product.name} />
+  );
+
+  const nameAndPrice = total ? (
+    <ProductNamePrice
+      name={product.name}
+      price={product.price * getQuantity(product.id)}
+      hasLink={hasLink}
+      link={link}
+    />
+  ) : (
+    <ProductNamePrice
+      name={product.name}
+      price={product.price}
+      hasLink={hasLink}
+      link={link}
+    />
+  );
+
+  const cardControls = (
+    <ProductCardControls
+      addBtn={() => addToCart(product)}
+      removeBtn={() => removeFromCart(product)}
+      counter={getQuantity(product.id)}
+      full={fullControls}
+    />
+  );
+
   return (
     <Card classes={cssClasses}>
-      <img src={product.img} alt={product.name} />
+      {productImage}
       <div className='bottom'>
-        {total ? (
-          <ProductNamePrice
-            name={product.name}
-            price={product.price * getQuantity(product.id)}
-          />
-        ) : (
-          <ProductNamePrice name={product.name} price={product.price} />
-        )}
-        <ProductCardControls
-          addBtn={() => addToCart(product)}
-          removeBtn={() => removeFromCart(product)}
-          counter={getQuantity(product.id)}
-          full={fullControls}
-        />
+        {nameAndPrice}
+        {cardControls}
       </div>
     </Card>
   );
