@@ -52,7 +52,13 @@ function App() {
       cart={cart}
     />
   );
-  const productPage = <Product />;
+  const productPage = (
+    <Product
+      cart={cart}
+      addToCart={addToCart}
+      removeFromCart={removeFromCart}
+    />
+  );
   const cartPage = (
     <Cart cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} />
   );
