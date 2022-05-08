@@ -16,16 +16,22 @@ const ProductsHomeSection = (props) => {
             product={products[1]}
             addToCart={addToCart}
             cart={cart}
+            hasLink={true}
+            link={`products/${products[1].id}`}
           />
           <ProductCard
             product={products[4]}
             addToCart={addToCart}
             cart={cart}
+            hasLink={true}
+            link={`products/${products[4].id}`}
           />
           <ProductCard
             product={products[10]}
             addToCart={addToCart}
             cart={cart}
+            hasLink={true}
+            link={`products/${products[10].id}`}
           />
         </div>
         <Link to='/products'>Check more products...</Link>
