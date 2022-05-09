@@ -18,6 +18,8 @@ const Products = (props) => {
                 cart={cart}
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
+                hasLink={true}
+                link={`products/${product.id}`}
               />
             );
           })}
