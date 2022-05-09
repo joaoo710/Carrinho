@@ -3,7 +3,7 @@ import { MemoryRouter } from 'react-router-dom';
 import Cart from '../pages/Cart';
 
 describe('Cart page', () => {
-  const product1 = { quantity: 2, price: 2.5, name: 'Shirt' };
+  const product1 = { quantity: 2, price: 2.5, name: 'Shirt', id: 1 };
 
   test("It renders a message when there's no items on the cart", () => {
     const cart = [];
