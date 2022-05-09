@@ -4,10 +4,11 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Home from './pages/Home';
-import Products from './pages/Products';
 import Cart from './pages/Cart';
+import Home from './pages/Home';
+import Page404 from './pages/Page404';
 import Product from './pages/Product';
+import Products from './pages/Products';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -72,6 +73,7 @@ function App() {
           <Route path='products' element={productsPage} />
           <Route path='products/:productId' element={productPage} />
           <Route path='cart' element={cartPage} />
+          <Route path='*' element={<Page404 />} />
         </Routes>
       </main>
       <Footer />
