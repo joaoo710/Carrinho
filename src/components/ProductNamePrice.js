@@ -10,7 +10,7 @@ const ProductNamePrice = (props) => {
   } = props;
   return (
     <div className='name-price'>
-      <h3>{hasLink ? <Link to={link}>{name}</Link> : { name }}</h3>
+      <h3>{hasLink ? <Link to={link}>{name}</Link> : name}</h3>
       <p>$ {price.toFixed(2)}</p>
     </div>
   );
