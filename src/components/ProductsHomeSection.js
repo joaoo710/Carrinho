@@ -10,14 +10,14 @@ const ProductsHomeSection = (props) => {
   return (
     <section className='products-section'>
       <Container>
-        <h2>Most popular</h2>
+        <h2>Mais vendidos</h2>
         <div className='products'>
           <ProductCard
-            product={products[1]}
+            product={products[17]}
             addToCart={addToCart}
             cart={cart}
             hasLink={true}
-            link={`products/${products[1].id}`}
+            link={`products/${products[17].id}`}
           />
           <ProductCard
             product={products[4]}
@@ -27,14 +27,14 @@ const ProductsHomeSection = (props) => {
             link={`products/${products[4].id}`}
           />
           <ProductCard
-            product={products[10]}
+            product={products[11]}
             addToCart={addToCart}
             cart={cart}
             hasLink={true}
-            link={`products/${products[10].id}`}
+            link={`products/${products[11].id}`}
           />
         </div>
-        <Link to='/products'>Check more products...</Link>
+        <Link to='/products'>Veja todos nossos produtos...</Link>
       </Container>
     </section>
   );

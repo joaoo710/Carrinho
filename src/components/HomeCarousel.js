@@ -19,8 +19,8 @@ const HomeCarousel = () => {
     >
       <SwiperSlide>
         <Hero
-          title='NEW COLLECTION'
-          text='Glasses and shirts that will make your summer look even more awesome'
+          title='NOVO PRODUTO'
+          text='Os melhores doces caseiros de Jundiaí e região você encotra aqui, na nossa Padaria!'
           heroCss={{
             backgroundImage: `url(${hero1})`,
             backgroundPositionX: 'center',
@@ -35,8 +35,8 @@ const HomeCarousel = () => {
       </SwiperSlide>
       <SwiperSlide>
         <Hero
-          title='Casual 83 Collection'
-          text="It's not a suit, but you can still look 83% awesome with it"
+          title='PROMOÇÃO'
+          text="Whisky Jack Daniels de Maça Verde por apenas 144,97!!"
           posRight={true}
           heroCss={{
             backgroundImage: `url(${hero2})`,
@@ -52,8 +52,8 @@ const HomeCarousel = () => {
       </SwiperSlide>
       <SwiperSlide>
         <Hero
-          title='Suit up!'
-          text='Check our new line of suits and ties to always look legendary'
+          title='Natal já esta aí'
+          text='Com o natal chegando, venha comprar o novo chotone da Lindt, não vai se arrepender'
           heroCss={{
             backgroundImage: `url(${hero3})`,
             backgroundPositionX: 'right',

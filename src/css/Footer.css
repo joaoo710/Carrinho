@@ -6,7 +6,7 @@ footer {
   margin-top: max(14px, auto);
   padding: 32px 14px;
   color: #fff;
-  background: var(--primary);
+  background: green;
 }
 
 footer .container {

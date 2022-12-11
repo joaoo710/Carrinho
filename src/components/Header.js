@@ -8,7 +8,7 @@ const Header = (props) => {
     <header>
       <Container>
         <Link to='/'>
-          <h1>Stinson Style</h1>
+          <h1>Smart Store</h1>
         </Link>
         <Navbar cart={props.cart} />
       </Container>

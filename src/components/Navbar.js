@@ -8,11 +8,36 @@ const Navbar = (props) => {
     <nav className='navbar'>
       <ul>
         <li>
-          <NavLink to='/products'>Products</NavLink>
+          <NavLink to='/acougue'>Açougue</NavLink>
         </li>
         <li>
-          <NavLink to='/cart'>Cart {count > 0 ? `[${count}]` : null}</NavLink>
+          <NavLink to='/padaria'>Padaria</NavLink>
         </li>
+        <li>
+          <NavLink to='/hortifruti'>Hortifruti</NavLink>
+        </li>
+        <li>
+          <NavLink to='/laticinios'>Laticinios</NavLink>
+        </li>
+        <li>
+          <NavLink to='/higiene'>Higiene</NavLink>
+        </li>
+        <li>
+          <NavLink to='/limpeza'>Limpeza</NavLink>
+        </li>
+        <li>
+          <NavLink to='/congelados'>Congelados</NavLink>
+        </li>
+        <li>
+          <NavLink to='/bebidas'>Bebidas</NavLink>
+        </li>
+        <li>
+          <NavLink to='/products'>Nossos Produtos</NavLink>
+        </li>
+        <li>
+          <NavLink to='/cart'>Carrinho {count > 0 ? `[${count}]` : null}</NavLink>
+        </li>
+        
       </ul>
     </nav>
   );
