@@ -86,7 +86,7 @@ const products = [
     id: 5,
     img: img5,
     name: 'Leite Condensado Moça Lata 395g ',
-    price: 160.18,
+    price: 8.99,
     description:
       'Maecenas eleifend, eros et ornare auctor, dolor ante mattis tortor, in cursus enim magna in lectus. Mauris id facilisis nunc. Etiam nisl nisi, posuere at bibendum id, facilisis id urna. Nullam tristique tempus tempus. Praesent blandit nisi in turpis fringilla, nec aliquam urna mollis. Integer et dignissim eros.',
     variations: [],

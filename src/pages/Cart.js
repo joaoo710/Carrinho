@@ -9,7 +9,7 @@ const Cart = (props) => {
   return (
     <section id='cart'>
       <Container>
-        <h2>Cart</h2>
+        <h2>Carrinho</h2>
         {cart.length > 0 ? <CartInfoPanel cart={cart} /> : null}
 
         {cart.length === 0 ? (

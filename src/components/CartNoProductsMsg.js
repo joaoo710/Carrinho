@@ -4,8 +4,8 @@ import '../css/CartNoProductsMsg.css';
 const CartNoProductsMsg = () => {
   return (
     <div className='cart-no-products'>
-      <h3>You didn't add any items to your shopping cart yet</h3>
-      <Link to='/products'>Check our products</Link>
+      <h3>Você ainda não adicionou nenhum produto em seu carrinho</h3>
+      <Link to='/products'>Veja nossos produtos</Link>
     </div>
   );
 };

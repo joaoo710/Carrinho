@@ -36,7 +36,7 @@ const HomeCarousel = () => {
       <SwiperSlide>
         <Hero
           title='PROMOÇÃO'
-          text="Whisky Jack Daniels de Maça Verde por apenas 144,97!!"
+          text="Whisky Jack Daniels de Maçã Verde por apenas $144,97!!"
           posRight={true}
           heroCss={{
             backgroundImage: `url(${hero2})`,
